@@ -37,3 +37,12 @@ function handleSubmit(e){
   e.target.reset();
   return false;
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector(".hero-video");
+  // Exemplo: pausar vídeo em dispositivos móveis
+  if (window.innerWidth < 768) {
+    video.pause();
+    video.style.display = "none";
+    // exiba imagem de fallback, etc
+  }
+});

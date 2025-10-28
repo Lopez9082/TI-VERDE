@@ -4,25 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TI Verde — Soluções Sustentáveis de TI</title>
-  <link rel="stylesheet" href="styles.css" />
+ <link rel="stylesheet" href="styles.css" >
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#" class="logo">
-        <!-- simple SVG logo -->
-        <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="2" y="6" width="20" height="12" rx="3" fill="#0B7A4A"></rect>
-          <path d="M6 9c2 0 3 3 6 3s4-3 6-3" stroke="#fff" stroke-width="1.2" fill="none"></path>
-        </svg>
-        <span>TI Verde</span>
-      </a>
+      <a href="#" class="logo"><span>TI Verde</span></a>
 
       <nav class="nav" id="nav">
         <a href="#servicos">Serviços</a>
         <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-        <button class="btn btn-ghost" id="btnLogin">Entrar</button>
+        <a href="#empresas">Empresas</a>
       </nav>
 
       <button id="burger" class="burger" aria-label="Abrir menu">
@@ -32,96 +25,80 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-left">
-          <h1>Transformando tecnologia em sustentabilidade</h1>
-          <p>
-            Soluções de TI com foco em eficiência energética, reciclagem de equipamentos e
-            consultoria para reduzir o impacto ambiental do seu parque tecnológico.
-          </p>
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="#contato">Solicitar orçamento</a>
-            <a class="btn btn-outline" href="#sobre">Saiba mais</a>
-          </div>
-        </div>
-        <div class="hero-right">
-          <!-- Placeholder illustration -->
-          <div class="device-mock">
-            <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet">
-              <rect x="10" y="20" rx="14" width="380" height="260" fill="#eaf7ef"/>
-              <circle cx="120" cy="140" r="36" fill="#0B7A4A" opacity="0.95"/>
-              <rect x="180" y="100" width="160" height="80" rx="10" fill="#d9f0e0"/>
-            </svg>
+    <!-- HERO COM VÍDEO -->
+    <section class="hero-vid">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="https://cdn.pixabay.com/video/2020/03/30/34832-404291805_large.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+      </video>
+
+      <div class="hero-overlay">
+        <div class="container hero-inner">
+          <div class="hero-left">
+            <h1>Transformando tecnologia em sustentabilidade</h1>
+            <p>
+              A TI Verde busca reduzir o impacto ambiental das operações de tecnologia.
+              Promovemos soluções que unem inovação, eficiência energética e responsabilidade ambiental.
+            </p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="#sobre">Saiba mais</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- SEÇÃO SERVIÇOS -->
     <section id="servicos" class="services container">
       <h2 class="section-title">Nossos serviços</h2>
       <div class="cards">
         <article class="card">
           <h3>Consultoria Sustentável</h3>
-          <p>Diagnóstico de consumo, plano de redução e estratégias de governança verde.</p>
+          <p>Analisamos o consumo energético e propomos planos de redução e reaproveitamento de recursos.</p>
         </article>
 
         <article class="card">
           <h3>Green Cloud</h3>
-          <p>Migração e otimização de workloads para infra com menor consumo energético.</p>
+          <p>Migração e otimização de sistemas em nuvens sustentáveis com energia renovável.</p>
         </article>
 
         <article class="card">
           <h3>Reciclagem e Reaproveitamento</h3>
-          <p>Gestão de ativos e descarte responsável com certificação ambiental.</p>
+          <p>Gestão de equipamentos obsoletos, promovendo o descarte responsável e reaproveitamento.</p>
+        </article>
+
+        <article class="card">
+          <h3>Educação Ambiental Digital</h3>
+          <p>Conscientização sobre o uso responsável da tecnologia e economia de energia.</p>
         </article>
       </div>
     </section>
 
+    <!-- SOBRE -->
     <section id="sobre" class="about">
       <div class="container about-inner">
         <div class="about-text">
-          <h2>Porque escolher a TI Verde?</h2>
-          <p>
-            Atuamos na intersecção entre tecnologia e meio ambiente: reduzimos custos operacionais
-            e a pegada de carbono dos seus sistemas com práticas comprovadas e parceiras certificadas.
-          </p>
+          <h2>O que é TI Verde?</h2>
+          <p>TI Verde visa diminuir o impacto ambiental do uso de tecnologia da informação.</p>
           <ul class="benefits">
             <li>Redução de custos com energia</li>
-            <li>Conformidade ambiental</li>
-            <li>Relatórios de impacto detalhados</li>
+            <li>Conformidade com normas ESG</li>
+            <li>Uso responsável de recursos</li>
+            <li>Melhoria da imagem corporativa</li>
           </ul>
-        </div>
-        <div class="about-stats">
-          <div class="stat">
-            <strong>+200</strong>
-            <span>Empresas atendidas</span>
-          </div>
-          <div class="stat">
-            <strong>30%</strong>
-            <span>Média de economia em energia</span>
-          </div>
-          <div class="stat">
-            <strong>Certificado</strong>
-            <span>Parceiros homologados</span>
-          </div>
         </div>
       </div>
     </section>
 
-    <section id="contato" class="contact container">
-      <h2 class="section-title">Fale conosco</h2>
-      <form id="contactForm" class="contact-form" onsubmit="return handleSubmit(event)">
-        <div class="row">
-          <input type="text" id="name" name="name" placeholder="Seu nome" required />
-          <input type="email" id="email" name="email" placeholder="Seu e-mail" required />
-        </div>
-        <textarea id="message" name="message" rows="4" placeholder="Como podemos ajudar?" required></textarea>
-        <div class="row actions">
-          <button class="btn btn-primary" type="submit">Enviar</button>
-          <button class="btn btn-ghost" type="reset">Limpar</button>
-        </div>
-      </form>
+    <!-- EMPRESAS -->
+    <section id="empresas" class="services container">
+      <h2 class="section-title">Empresas que aplicam TI Verde</h2>
+      <div class="cards">
+        <article class="card"><h3>Google</h3><p>Opera com energia 100% renovável e IA para otimizar consumo.</p></article>
+        <article class="card"><h3>Microsoft</h3><p>Busca ser carbono negativo até 2030 com data centers verdes.</p></article>
+        <article class="card"><h3>Dell</h3><p>Usa materiais reciclados e promove logística reversa global.</p></article>
+        <article class="card"><h3>IBM</h3><p>Investe em IA e eficiência energética em larga escala.</p></article>
+      </div>
     </section>
   </main>
 
@@ -137,6 +114,8 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
