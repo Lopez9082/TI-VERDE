@@ -34,15 +34,18 @@ body {
   margin: 0 auto;
 }
 
-/* header */
 .site-header {
-  background: transparent;
+  background: transparent; /* Totalmente transparente, sem fundo colorido */
   position: sticky;
   top: 0;
   z-index: 40;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(10px); /* Blur forte para efeito de vidro transparente sobre o vídeo */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil branca para definição leve */
+  transition: backdrop-filter 0.3s ease; /* Transição suave */
 }
-
+.site-header:hover {
+  backdrop-filter: blur(12px); /* Aumenta o blur no hover para mais efeito */
+}
 .header-inner {
   display: flex;
   align-items: center;
@@ -60,16 +63,20 @@ body {
   font-size: 1.05rem;
 }
 
+/* nav (links do menu) */
 .nav {
   display: flex;
   gap: 18px;
   align-items: center;
 }
-
 .nav a {
   text-decoration: none;
-  color: var(--muted);
+  color: rgb(11, 100, 11); /* Branco para visibilidade no vídeo de fundo */
   font-weight: 600;
+  transition: color 0.3s ease;
+}
+.nav a:hover {
+  color: var(--green-500); /* Verde claro no hover para destaque */
 }
 
 .btn {
@@ -114,10 +121,7 @@ body {
   border-radius: 2px;
 }
 
-/* hero *//* ===========================
-   HERO COM VÍDEO DE FUNDO
-=========================== */
-
+/* hero com vídeo */
 .hero-vid {
   position: relative;
   width: 100%;
@@ -130,14 +134,11 @@ body {
 
 .hero-video {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz o vídeo cobrir a tela inteira, igual ao GIF */
   z-index: 1;
 }
 
@@ -146,7 +147,7 @@ body {
   z-index: 2;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45); /* leve escurecimento para legibilidade */
+  background: rgba(0, 0, 0, 0.45); /* Leve escurecimento para legibilidade */
   display: flex;
   align-items: center;
 }
@@ -187,33 +188,6 @@ body {
 
 .hero-ctas .btn-primary:hover {
   background-color: var(--green-500);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .hero-left h1 {
-    font-size: 2rem;
-  }
-  .hero-left p {
-    font-size: 1rem;
-  }
-  .hero-inner {
-    text-align: center;
-    padding: 0 1rem;
-  }
-}
-
-
-/* Animação suave */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* services */
@@ -277,12 +251,41 @@ body {
   font-weight: bold;
 }
 
+/* footer */
+.site-footer {
+  padding: 20px 0;
+  background: var(--green-100);
+  text-align: center;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-inner div {
+  flex: 1;
+}
+
 /* responsividade */
 @media (max-width: 768px) {
   .hero-inner,
   .about-inner {
     flex-direction: column;
     text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .hero-left p {
+    font-size: 1rem;
+  }
+
+  .hero-inner {
+    padding: 0 1rem;
   }
 
   .cards {
@@ -296,63 +299,9 @@ body {
   .nav {
     display: none;
   }
-}
-/* ===== HERO COM VÍDEO ===== */
-.hero-vid {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #000; /* fundo só do vídeo */
-}
 
-.hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  .footer-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
-
-.hero-overlay {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.45);
-  display: flex;
-  align-items: center;
-  z-index: 1;
-}
-
-.hero-inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  text-align: left;
-}
-
-.hero-left h1 {
-  font-size: 3rem;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.hero-left p {
-  font-size: 1.2rem;
-  color: #e5e5e5;
-  max-width: 600px;
-  line-height: 1.6;
-}
-
-/* Corrige fundo do site */
-body {
-  background: #f7f9fb !important;
-  color: #0f172a;
-}
-

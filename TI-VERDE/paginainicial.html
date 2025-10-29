@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TI Verde — Soluções Sustentáveis de TI</title>
- <link rel="stylesheet" href="styles.css" >
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -15,7 +15,9 @@
       <nav class="nav" id="nav">
         <a href="#servicos">Serviços</a>
         <a href="#sobre">Sobre</a>
+        <a href="#beneficios">Benefícios</a>
         <a href="#empresas">Empresas</a>
+        <a href="#contato">Contato</a>
       </nav>
 
       <button id="burger" class="burger" aria-label="Abrir menu">
@@ -27,11 +29,10 @@
   <main>
     <!-- HERO COM VÍDEO -->
     <section class="hero-vid">
-      <video class="hero-video" autoplay muted loop playsinline>
-        <source src="https://cdn.pixabay.com/video/2020/03/30/34832-404291805_large.mp4" type="video/mp4">
-        Seu navegador não suporta vídeos HTML5.
+      <video class="hero-video" autoplay muted loop playsinline poster="https://via.placeholder.com/640x360?text=Carregando+V%C3%ADdeo">
+        <source src="https://media.istockphoto.com/id/933395700/pt/v%C3%ADdeo/wind-turbine-farm-at-sunset.mp4?s=mp4-640x640-is&k=20&c=FEM0uS1GSdv5u_vLJc5A6Y04J7rIlHcmFL7n2qUoubM=" type="video/mp4">
+        Seu navegador não suporta vídeos. <a href="https://media.istockphoto.com/id/933395700/pt/v%C3%ADdeo/wind-turbine-farm-at-sunset.mp4?s=mp4-640x640-is&k=20&c=FEM0uS1GSdv5u_vLJc5A6Y04J7rIlHcmFL7n2qUoubM=">Clique aqui para assistir</a>.
       </video>
-
       <div class="hero-overlay">
         <div class="container hero-inner">
           <div class="hero-left">
@@ -71,6 +72,11 @@
           <h3>Educação Ambiental Digital</h3>
           <p>Conscientização sobre o uso responsável da tecnologia e economia de energia.</p>
         </article>
+
+        <article class="card">
+          <h3>Auditoria de Carbono</h3>
+          <p>Avaliação completa do impacto ambiental da sua infraestrutura de TI, com relatórios detalhados para compliance.</p>
+        </article>
       </div>
     </section>
 
@@ -79,7 +85,8 @@
       <div class="container about-inner">
         <div class="about-text">
           <h2>O que é TI Verde?</h2>
-          <p>TI Verde visa diminuir o impacto ambiental do uso de tecnologia da informação.</p>
+          <p>TI Verde visa diminuir o impacto ambiental do uso de tecnologia da informação, promovendo práticas que reduzem emissões de carbono e otimizam recursos. Segundo a ONU, o setor de TI consome cerca de 4% da eletricidade global, equivalente às emissões de um país como a França. Nossas soluções ajudam empresas a migrar para modelos mais verdes.</p>
+          <p>Fundada em 2020, a TI Verde trabalha com empresas de todos os portes, oferecendo consultorias personalizadas. Já ajudamos mais de 500 organizações a reduzir seus custos energéticos em até 30% e alcançar certificações ESG.</p>
           <ul class="benefits">
             <li>Redução de custos com energia</li>
             <li>Conformidade com normas ESG</li>
@@ -87,6 +94,32 @@
             <li>Melhoria da imagem corporativa</li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <!-- POR QUE ESCOLHER TI VERDE? -->
+    <section id="beneficios" class="services container">
+      <h2 class="section-title">Por que escolher TI Verde?</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Eficiência Energética</h3>
+          <p>Reduza o consumo de energia em até 40% com nossas otimizações, utilizando IA para monitorar e ajustar sistemas em tempo real.</p>
+        </article>
+
+        <article class="card">
+          <h3>Sustentabilidade Certificada</h3>
+          <p>Ajudamos a obter certificações como ISO 14001, garantindo que sua empresa esteja alinhada com padrões globais de responsabilidade ambiental.</p>
+        </article>
+
+        <article class="card">
+          <h3>ROI Rápido</h3>
+          <p>Nossos clientes veem retorno sobre investimento em menos de 6 meses, com economia média de R$ 50.000 por ano em energia.</p>
+        </article>
+
+        <article class="card">
+          <h3>Inovação Verde</h3>
+          <p>Implementamos tecnologias emergentes, como data centers movidos a energia solar, para um futuro mais sustentável.</p>
+        </article>
       </div>
     </section>
 
@@ -98,15 +131,15 @@
         <article class="card"><h3>Microsoft</h3><p>Busca ser carbono negativo até 2030 com data centers verdes.</p></article>
         <article class="card"><h3>Dell</h3><p>Usa materiais reciclados e promove logística reversa global.</p></article>
         <article class="card"><h3>IBM</h3><p>Investe em IA e eficiência energética em larga escala.</p></article>
+        <article class="card"><h3>Amazon</h3><p>Compromisso com 100% de energia renovável até 2025, reduzindo emissões em 50%.</p></article>
       </div>
     </section>
-  </main>
-
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
         <strong>TI Verde</strong>
-        <p>Tech sustentável para empresas conscientes.</p>
+        <p>Tech sustentável para empresas conscientes. Nossa missão é acelerar a transição para uma TI verde, reduzindo o impacto ambiental global.</p>
+        <p>Links: <a href="#">Facebook</a> | <a href="#">LinkedIn</a> | <a href="#">Twitter</a></p>
       </div>
       <div>
         <p>© <span id="year"></span> TI Verde • Todos os direitos reservados</p>
@@ -114,8 +147,6 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
